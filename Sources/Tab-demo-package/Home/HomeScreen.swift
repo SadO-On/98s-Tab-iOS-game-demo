@@ -43,7 +43,8 @@ struct HomeScreen: View {
                         withAnimation(.spring(response: 0.5, dampingFraction: 0.5, blendDuration: 0)) {
                             scales[0] = 1
                         }
-                    }
+                    }                        .environment(\.layoutDirection, .leftToRight)
+
 
                 LevelComponentWidget(level: String(viewModel.state.userLevel.level),
                                      percent: viewModel.state.userLevel.xp)

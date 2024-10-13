@@ -67,7 +67,8 @@ struct BoardScreen: View {
                                 determineSwipingPosition(touchLocation: touchLocation)
                             }.onEnded { _ in
                                 viewModel.onEevent(event: BoardEvents.UserSwiped())
-                            })
+                            })                        .environment(\.layoutDirection, .leftToRight)
+
                     
              
 
